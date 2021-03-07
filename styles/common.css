@@ -1,0 +1,18 @@
+#main-header {
+    color: blue;
+    font-family: 'Montez', cursive;
+}
+#sub-header {
+    font-family: 'Ubuntu Mono';
+}
+.signingButtons {
+    float: right;
+}
+#signupbtn, #signinbtn {
+    background-color: green;
+}
+#signUpModal, #signInModal {
+    padding-top: 100px;
+}
+
+

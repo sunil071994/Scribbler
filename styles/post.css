@@ -1,0 +1,68 @@
+body{
+    position : relative;
+     bottom:0;
+}
+
+#postbody {
+    background-color: white;
+}
+
+.heading-content{
+   text-align: center;
+   font-size: 25px;
+   font-weight: bolder;
+}
+
+.author{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+ 
+}
+
+.post-content{
+    word-wrap: break-word;
+    margin-top: 20px;
+}
+
+.comment-container{
+    min-height: 0px;
+    overflow: hidden;
+  
+}
+
+.author-name{
+    font-weight: bold;
+    font-size: 20px;
+    width: 50%;
+    font-family: 'Courier New', Courier, monospace; 
+}
+
+.comment{
+    width: 1000px;
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+}
+
+#likeButton{
+    margin-top: 20px;
+}
+
+#editButton{
+    width: 50%;
+    margin-left: 500px;
+    padding-left: 4px;
+    width: 70px;
+}
+
+#allCommentsHeading{
+    font-weight: bolder;
+    padding-top: 10px;
+}
+
+#comments{
+    margin: 5px;
+    padding: 5px;
+    background-color: lightgrey;
+}

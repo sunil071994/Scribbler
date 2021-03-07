@@ -1,0 +1,26 @@
+body, html {
+    height: 100%;
+    margin: 0px;;
+}
+#mainBody {
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+}
+.postButtons{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.btn.btn-default {
+    background-color: yellow;
+}
+#createPost {
+    background-color: green;
+}
+#createPostModal {
+    padding-top: 100px;
+}
+

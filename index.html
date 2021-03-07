@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <title>ScriBBler</title>
+
+        <!-- Font Awesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Google Fonts CDN -->
+        <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+        <!-- Bootstrap CDN-->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="./styles/common.css" /> 
+        <link rel="stylesheet" type="text/css" media="screen" href="./styles/index.css" /> 
+        
+        <script src="./scripts/index.js"></script>
+    </head>
+
+    <body id="mainBody">
+        <!-- Page header -->
+        <header>
+            <div class="page-header">
+                <div class="signingButtons">
+                    <button id="signup" class="btn btn-primary" type="signUp" onclick="displaySignup()">Sign Up</button>
+                    <button id="signin" class="btn btn-primary" type="signIn" onclick="displaySignIn()">Sign In</button>
+                </div>
+            
+                <h2 id="main-header">ScriBBler</h2>
+                <h6 id="sub-header">Explore, Imagine, Create</h6>
+            </div>
+        </header>
+
+        <!-- All posts & Create posts div-->
+        <div class="postButtons">
+            <button class="btn btn-default" type="button" onclick="window.location='./html/postslist.html'">All Posts</button>
+            <button class="btn btn-default" type="button" onclick="displayCreatePost()">Create Post</button>
+        </div>
+
+        <!--Sign up modal-->
+        <form>
+            <div id="signUpModal" class="modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Get Started</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeSignup()">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="form-group"> 
+                                <label for="inputName">Name</label>
+                                <input type="text" class="form-control" id="inputName" placeholder="Enter your name" required>
+                            </div>
+                            <div class="form-group"> 
+                                <label for="inputUserName">Username</label>
+                                <input type="text" class="form-control" id="inputUserName" placeholder="Enter your username" required>
+                            </div>
+                            <div class="form-group"> 
+                                <label for="inputPassword">Password</label>
+                                <input type="password" class="form-control" id="inputPassword" placeholder="Enter your password" required>
+                            </div>
+                            <div class="form-group"> 
+                                <label for="inputConfirmPassword">Confirm Password</label>
+                                <input type="password" class="form-control" id="inputConfirmPassword" placeholder="Re-enter your password" required>
+                            </div>
+
+                            <button id="signupbtn" class="btn btn-primary btn-block" type="signUp">Sign Up</button>
+                            
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <!--Sign In modal-->
+        <form>
+            <div id="signInModal" class="modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Welcome Back!</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeSignIn()">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="form-group"> 
+                                <label for="inputUserName">Username</label>
+                                <input type="text" class="form-control" id="inputUserName" placeholder="Enter your username" required>
+                            </div>
+                            <div class="form-group"> 
+                                <label for="inputPassword">Password</label>
+                                <input type="password" class="form-control" id="inputPassword" placeholder="Enter your password" required>
+                            </div>
+
+                            <div class="form-group">
+                                <button id="signinbtn" class="btn btn-primary btn-block" type="signIn">Sign In</button>
+                            </div>
+
+                            <div class="d-flex justify-content-center links">
+                                Not a member?&nbsp;<a href="#" onclick="displaySignup()">Sign Up</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <!--Create Post modal-->
+        <form>
+            <div id="createPostModal" class="modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-xl"  role="document">
+                
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Pen Your Post</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeCreatePost()">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="form-group"> 
+                                <label for="inputUserName">Title</label>
+                                <input type="text" class="form-control" id="inputUserName" placeholder="Enter title of your post" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputContent">Contents</label>
+                                <textarea class="form-control" id="inputContent" rows="10" placeholder="Enter the contents of your post" required></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button id="createPost" class="btn btn-primary justify-content-center" type="create">Create</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </body>
+    
+</html>
